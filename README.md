@@ -1,1 +1,3 @@
-# 1007learngit
+# New Repo
+# First commit
+# Git >> Project
