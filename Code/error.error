@@ -1,0 +1,9 @@
+which: no readlink in ((null))
+Traceback (most recent call last):
+  File "./1009test.py", line 147, in <module>
+    acceptance_rate=float(num_accepts)/float(mc.total_trials())
+NameError: global name 'num_accepts' is not defined
+Traceback (most recent call last):
+  File "./1009test.py", line 147, in <module>
+    acceptance_rate=float(num_accepts)/float(mc.total_trials())
+NameError: global name 'num_accepts' is not defined

@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 
 # 3000+1000  --ok
-# Low Res & High Res --Tutorial
 # repacking & rotamer 2 each time
 # add small mover
 # rmsd
 # time too long
+
+# scorefxn
+# sugar turn off something
+# ringmover off
 
 import time
 begin=time.clock()
@@ -13,9 +16,8 @@ begin=time.clock()
 from rosetta import *
 init(extra_options='-include_sugars -override_rsd_type_limit -read_pdb_link_records -write_pdb_link_records')
 
-
 #initial_pose=pose_from_pdb('/Users/XT/Dropbox/Project/pilus_monomer_repacking.pdb')   # change file
-initial_pose=pose_from_pdb('/home/Xiaotong/test/pilus_monomer_repacking.pdb')
+initial_pose=pose_from_pdb('/home/Xiaotong/Github/Project/pilus_monomer_repacking.pdb')
 pose=Pose()
 
 tail_start=132-16
@@ -46,7 +48,7 @@ ringmover.movemap(mm)
 
 
 # Job Distributor
-jd=PyJobDistributor("0929output",10,scorefxn)
+jd=PyJobDistributor("1009output",100,scorefxn)
 jd.native_pose =initial_pose
 
 

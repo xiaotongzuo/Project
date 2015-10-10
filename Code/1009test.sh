@@ -1,4 +1,4 @@
 #!/bin/sh
 source ~/Pyrosetta/SetPyRosettaEnvironment.sh
-cd /home/Xiaotong/test/
-./0929test.py  
+cd /home/Xiaotong/Github/Project/Code
+./1009test.py  
