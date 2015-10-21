@@ -3,5 +3,5 @@ Executable = ./1020test.sh
 output = out.out
 error = error.error
 Log = log.log
-Queue 10
+Queue 40
 

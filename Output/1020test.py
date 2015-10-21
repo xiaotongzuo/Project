@@ -10,9 +10,6 @@
 # sugar turn off something
 # ringmover off
 
-import time
-begin=time.clock()
-
 from rosetta import *
 init(extra_options='-include_sugars -override_rsd_type_limit -read_pdb_link_records -write_pdb_link_records')
 
@@ -48,7 +45,7 @@ ringmover.movemap(mm)
 
 
 # Job Distributor
-jd=PyJobDistributor("1020output",10,scorefxn)
+jd=PyJobDistributor("1020output",100,scorefxn)
 jd.native_pose =initial_pose
 
 
@@ -140,7 +137,6 @@ while not jd.job_complete:
         pack_mover_min_renew_taskpack(pose)
     jd.output_decoy(pose)
     
-end=time.clock()
 '''# Acceptance Rate
 # log_acceptance_rate
 f=open('log.txt','a')
